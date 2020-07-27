@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+/* Styles for Game.js */
+.Board {
+  position: relative;
+  margin: 0 auto;
+  background: #000;
+  background-image: linear-gradient(#333 1px, transparent 1px), linear-gradient(90deg, #333 1px, transparent 1px);
+}
+.Cell {
+  background: #ccc;
+  position: absolute;
+}
