@@ -1,15 +1,16 @@
 import React from 'react';
 import './App.css';
 import Game from './Components/Game.js';
+import Rules from './Components/Rules.js';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Game of Life!</h1>
-          <p>By: Devanee Reid</p>
+    <div className="App" >
+      <h1>Game of Life!</h1> 
+        <div style={{display: 'flex', flexDirection: 'row'}}>
           <Game />
-      </header>
+          <Rules />
+        </div>
     </div>
   );
 }

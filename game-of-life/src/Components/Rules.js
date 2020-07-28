@@ -1,8 +1,16 @@
-// In the Game of Life, these rules examine each cell of the grid. For each cell, it counts that cell's eight neighbors (up, down, left, right, and diagonals), and then act on that result.
+import React from 'react';
 
-// * If the cell is alive **and** has 2 or 3 neighbors, then it remains alive. Else it dies.
-// * If the cell is dead **and** has exactly 3 neighbors, then it comes to life. Else if remains dead.
-
-// From those two rules, many types of "creatures" can be created that [move around the "landscape"](https://www.youtube.com/watch?v=28vxPvTDh4E).
-
-// Note: cells that are off the edge of the grid are typically assumed to be dead. (In other cases, people sometimes code it up to wrap around to the far side.)
+export default function Rules() {
+    
+    return(
+        <div className="rules-container" style={{ width: '35%'}}>
+            <h1>Rules: </h1>
+            <ol className="rules" style={{textAlign: 'initial'}}>
+                <li>Any live cell with fewer than two live neighbours dies, as if by underpopulation.</li>
+                <li>Any live cell with two or three live neighbours lives on to the next generation.</li>
+                <li> Any live cell with more than three live neighbours dies, as if by overpopulation.</li>
+                <li> Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</li>
+            </ol>
+        </div>
+    )
+};
