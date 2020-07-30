@@ -9,11 +9,11 @@ export default function Rules() {
                 <h1 className="rules-title">Rules: </h1>
                     <div className="rules" >
                         1. Any live cell with fewer than two live neighbors dies, as if by underpopulation. 
-                            <br />
+                            <br /> <br />
                         2. Any live cell with two or three live neighbors lives on to the next generation.
-                            <br />
+                            <br /> <br />
                         3. Any live cell with more than three live neighbors dies, as if by overpopulation.
-                            <br />
+                            <br /> <br />
                         4. Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.
                     </div>
                 <div className="about-link">
