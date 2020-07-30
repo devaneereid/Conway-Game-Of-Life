@@ -1,50 +1,81 @@
+.body {
+  font-family: 'Archivo Black', sans-serif;
+  font-family: 'Vollkorn', serif;
+  font-family: 'Krona One', sans-serif;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Styling for App.js */
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  font-family: 'Krona One', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* Styles for Game.js */
+/* Styling for GameLogic.js */
 .Board {
   position: relative;
   margin: 0 auto;
-  background: #000;
-  background-image: linear-gradient(#333 1px, transparent 1px), linear-gradient(90deg, #333 1px, transparent 1px);
+  background: teal;
+  background-image: 
+    linear-gradient(#333 1px, transparent 1px), 
+    linear-gradient(90deg, #333 1px, transparent 1px);
 }
 .Cell {
-  background: #ccc;
-  position: absolute;
+  background: pink;
+  position: absolute !important;
 }
+.button {
+  padding: 5px 15px;
+  margin: 5px;
+  border-radius: 8px;
+  background: rgb(48, 179, 189);
+  font-family: 'Nunito', sans-serif;
+}
+.button:hover {
+  background: pink;
+}
+
+/* Styling for Rules.js */
+.rules-container {
+  margin: 0 60px;
+}
+.rules-title {
+  font-family: 'Krona One', sans-serif;
+  font-size: 1.7rem;
+  text-decoration: underline;
+}
+.rules {
+  font-family: 'Nunito', sans-serif; 
+  line-height: 2rem;
+  font-size: 1.2rem; 
+}
+.about-link {
+  margin-top: 20px;
+  font-family: 'Nunito', sans-serif; 
+  font-size: 1.2rem; 
+}
+
+/* Styling for About.js */
+.about {
+  font-family: 'Vollkorn', serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 2rem;
+  margin: 0 60px;
+}
+.about-title {
+  font-family: 'Krona One', sans-serif;
+  text-decoration: underline;
+}
+.about-conway {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.2rem;
+}
+.game-link {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.2rem;
+}
+
