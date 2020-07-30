@@ -41,6 +41,7 @@ class GameLogic extends Component {
             this.timeOutHandler = null;
         }
     }
+
     // this will slow down the alive cells on the grid
     moveSlower = () => {
         this.setState({
@@ -48,6 +49,7 @@ class GameLogic extends Component {
             speed: 200
         })
     }
+    
     // this will speed up the game and alive cells on the grid
     moveFaster = () => {
         this.setState({
@@ -164,7 +166,9 @@ class GameLogic extends Component {
         this.game = this.createEmptyGame();
         this.setState({
             myGame: this.fillCells(),
-            nextGeneration: 0
+            nextGeneration: 0,
+            // speed is set back to default of 100
+            speed: 100
         });
     }
     // Picks random cells across the board each time 
