@@ -69,6 +69,13 @@
 .about-title {
   font-family: 'Krona One', sans-serif;
   text-decoration: underline;
+  border: 1px solid grey;
+  border-radius: 10px;
+  background: teal;
+  opacity: 0.8;
+  color: white;
+  width: 100%;
+  padding: 10px 0;
 }
 .about-conway {
   font-family: 'Nunito', sans-serif;
