@@ -4,6 +4,9 @@ import BoxLogic from './BoxLogic';
 const BOX_SIZE = 20;
 const WIDTH = 600;
 const HEIGHT = 500;
+// const randColorNum1 = Math.floor(Math.random() * Math.floor(255))
+// const randColorNum2 = Math.floor(Math.random() * Math.floor(255))
+// const randColorNum3 = Math.floor(Math.random() * Math.floor(255))
 
 class GameLogic extends Component {
     constructor() {
@@ -17,7 +20,7 @@ class GameLogic extends Component {
         myGame: [],
         alive: false,
         speed: 100,
-        nextGeneration: 0,
+        nextGeneration: 0
     }
 
     // startGame will toggle on(dead) or off(alive)
@@ -37,6 +40,20 @@ class GameLogic extends Component {
             window.clearTimeout(this.timeOutHandler);
             this.timeOutHandler = null;
         }
+    }
+    // this will slow down the alive cells on the grid
+    moveSlower = () => {
+        this.setState({
+            alive: true,
+            speed: 200
+        })
+    }
+    // this will speed up the game and alive cells on the grid
+    moveFaster = () => {
+        this.setState({
+            alive: true,
+            speed: 60
+        })
     }
 
     // check directions/cells next to selected cell
@@ -93,9 +110,9 @@ class GameLogic extends Component {
     // Creates an empty game
     createEmptyGame() {
         let game = [];
+        // let cellClass = "";
         for (let y = 0; y < this.rows; y++) {
             game[y] = [];
-
             for (let x = 0; x < this.cols; x++) {
                 game[y][x] = false;
             }
@@ -176,6 +193,7 @@ class GameLogic extends Component {
     }
     // Selects less cells and speed set to a default of 150 msec/can be changed in the input
     defaultGridTwo = () => {
+    //   let cellClass = "";
         for (let y = 0; y < this.rows; y++) {
             for (let x = 0; x < this.cols; x++) {
                 this.game[y][x] = Math.floor(Math.random() >= 0.9);
@@ -230,6 +248,8 @@ class GameLogic extends Component {
                     <div className="button-container"> {alive ? 
                         <button className="button" onClick={this.pauseGame}>Pause Game</button> : <button className="button" onClick={this.startGame}>Start Game</button>}
                         <button className="button" onClick={this.randomGrid}>Select Random</button>
+                        <button className="button" onClick={this.moveSlower}>Move Slower</button>
+                        <button className="button" onClick={this.moveFaster}>Move Faster</button>
                         <button className="button" onClick={this.defaultGridOne}>Default One</button>
                         <button className="button" onClick={this.defaultGridTwo}>Default Two</button>
                         <button className="button" onClick={this.handleClear}>Clear Game</button>

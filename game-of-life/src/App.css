@@ -24,7 +24,11 @@
 }
 .Cell {
   background: pink;
+  /* background-image: linear-gradient(pink, yellow); */
   position: absolute !important;
+}
+.Cell:hover{
+  background: gold;
 }
 .button {
   padding: 5px 15px;
