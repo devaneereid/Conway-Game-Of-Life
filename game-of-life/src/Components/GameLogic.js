@@ -178,7 +178,7 @@ class GameLogic extends Component {
     defaultGridTwo = () => {
         for (let y = 0; y < this.rows; y++) {
             for (let x = 0; x < this.cols; x++) {
-                this.game[y][x] = Math.floor(Math.random() >= 0.84);
+                this.game[y][x] = Math.floor(Math.random() >= 0.9);
             }
         }
         this.setState({ 
@@ -220,7 +220,7 @@ class GameLogic extends Component {
                 </div>
                     <h3>Generation Count: {this.state.nextGeneration}</h3>
                 <div className="controls">
-                    Update every: 
+                    Input Speed: 
                     <input 
                         className="input"
                         value={this.state.speed} 

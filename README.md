@@ -2,18 +2,14 @@
 
 ### Computer Science - Unit 1 Build Week Project 
 ```
-This application is an implementation of John Conway's, Game of Life, that he discovered in 1970. 
-
+This application is an implementation of John Conway's, Game of Life.
 ```
 ## Built using: 
 > - JavaScript
 > - React.js
 
-### Rules: 
-```
-These are the rules required for Game of Life.
+### Game of Life Rules: 
 
-```
 > 1. Any live cell with fewer than two live neighbors dies, as if by underpopulation.
 
 > 2. Any live cell with two or three live neighbors lives on to the next generation.

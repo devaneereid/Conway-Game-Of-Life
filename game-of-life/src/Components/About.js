@@ -9,14 +9,17 @@ export default function About() {
                 <p className="about-conway">
                     Conway's Game of Life was first developed by a British mathematican, John Conway, in 1970. 
                         <br />
-                    The game consists of being in either two states, alive(on) or dead(off). The patterns on the game evolve over time and the cells move across the grid, making this a "zero-player" game and Turing complete. There is a set of rules the game follows, which are listed next to the game. Those rules were chosen to satisfy the following criteria...
+                    The game consists of being in either two states, alive(on) or dead(off). The patterns on the game evolve over time as the cells move across the grid, making this a "zero-player" game and Turing complete. There is a set of rules that the game follows, (which are listed next to the game). <br />
+                    Those rules were chosen to satisfy the following criteria...
                     <div className="about-rules">
-                        < br />
-                        - Any live cell with two or three live neighbors survives.
-                        < br /> < br />
-                        - Any dead cell with three live neighbors becomes a live cell.
-                        < br /> < br /> 
-                        - All other live cells die in the next generation. Similarly, all other dead cells stay dead.
+                        <h4 style={{ fontWeight:'600'}}>Birth:</h4>
+                            - Every empty cell that is adjacent to exactly three live neighbors becomes a birth/live cell.<hr />
+                        <h4 style={{ fontWeight:'600'}}>Death: </h4>
+                            - Each cell with four or more neighbors will die. Also, each cell with only one neighbor or none, will die from isolation.<hr/>
+                        <h4 style={{ fontWeight:'600'}}>Survival: </h4>
+                            - Any live cell/counter with two or three live neighbors survives to move to the next generation.<hr/>
+                        <h4 style={{ fontWeight:'600'}}>Side Note:</h4> 
+                            - All other live cells die in the next generation. Similarly, all other dead cells stay dead.<hr/>
                     </div>
                 </p>
                 <p className="about-conway">
