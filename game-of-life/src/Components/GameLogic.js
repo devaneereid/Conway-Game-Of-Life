@@ -49,7 +49,7 @@ class GameLogic extends Component {
             speed: 200
         })
     }
-    
+
     // this will speed up the game and alive cells on the grid
     moveFaster = () => {
         this.setState({
@@ -171,6 +171,7 @@ class GameLogic extends Component {
             speed: 100
         });
     }
+    
     // Picks random cells across the board each time 
     randomGrid = () => {
         for (let y = 0; y < this.rows; y++) {
@@ -183,11 +184,12 @@ class GameLogic extends Component {
             speed: 100
         });
     }
+
     // Selects less cells and speed set to a default of 50 msec/can be changed in the input
     defaultGridOne = () => {
         for (let y = 0; y < this.rows; y++) {
             for (let x = 0; x < this.cols; x++) {
-                this.game[y][x] = Math.floor(Math.random() >= 0.7);
+                this.game[y][x] = Math.floor(Math.random() >= 0.75);
             }
         }
         this.setState({ 
@@ -195,6 +197,7 @@ class GameLogic extends Component {
             speed: 50
         });
     }
+
     // Selects less cells and speed set to a default of 150 msec/can be changed in the input
     defaultGridTwo = () => {
     //   let cellClass = "";
@@ -208,6 +211,7 @@ class GameLogic extends Component {
             speed: 150
         });
     }
+
     // Selects cells speed and sets to a default of 200 msec/can be changed in the input
     defaultGridThree = () => {
         let grid2 = Array(this.rows).fill().map(() => Array(this.cols).fill(false))
