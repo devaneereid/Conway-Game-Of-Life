@@ -42,7 +42,6 @@ export default function About() {
                     Conway's Game of Life! 
                         < br />
                         < br />
-                        Hope you enjoyed playing.
                 </p>
             <div className="game-link">
                 <NavLink to='/'>Back to Game</NavLink> 
