@@ -36,7 +36,7 @@ This application is an implementation of John Conway's, Game of Life.
 #### Death: 
 > - Each cell with four or more neighbors will die. Also, each cell with only one neighbor or none, will die from isolation.
 
-#### Surivival: 
+#### Survival: 
 > - Any live cell/counter with two or three live neighbors survives to move to the next generation. All other live cells die in the next generation. Similarly, all other dead cells stay dead.
 ```
 ```
