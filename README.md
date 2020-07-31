@@ -2,7 +2,7 @@
 
 ### Computer Science - Unit 1 Build Week Project 
 ```
-This application is an implementation of John Conway's, Game of Life.
+This application is an implementation of John Conway's, Game of Life that was developed in 1970 as a way to explain unpredictable cellular automaton.
 ```
 ## Built using: 
 > - JavaScript
